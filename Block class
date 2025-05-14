@@ -1,0 +1,76 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package anotherproject;
+
+import java.awt.Image;
+
+public class Block {
+    int x;
+    int y;
+    int width;
+    int height;
+    Image image;
+    private PacMan pacman;
+    
+    int startX;
+    int startY;
+    
+    char direction = 'U';
+    int velocityx = 0;
+    int velocityY = 0;
+    
+    
+    
+    Block(Image image, int x, int y, int width, int height, PacMan pacman){
+        this.pacman = pacman;
+        this.image = image;
+        this.height = height;
+        this.width = width;
+        this.x = x;
+        this.y = y;
+        this.startX = x;
+        this.startY = y;
+    }
+    
+    void updateDirection(char direction){
+        char lastDirection = this.direction;
+        this.direction = direction;
+        updateVelocity();
+        this.x += this.velocityx;
+        this.y += this.velocityY;
+        for(Block wall : pacman.getWalls()){
+            if(pacman.collision(this, wall)){
+                this.x -= this.velocityx;
+                this.y -= this.velocityY;
+                this.direction = lastDirection;
+                updateVelocity();
+            }
+        }
+    }
+    
+    void updateVelocity(){
+        if(this.direction == 'U'){
+            this.velocityx = 0;
+            this.velocityY = - 32 / 4;
+        }
+        else if(this.direction == 'D'){
+            this.velocityx = 0;
+            this.velocityY = 32 / 4;
+        }
+        else if(this.direction == 'L'){
+            this.velocityx = -32 / 4;
+            this.velocityY = 0;
+        }
+        else if(this.direction == 'R'){
+            this.velocityx = 32 / 4;
+            this.velocityY = 0;
+        }
+    }
+    
+    void reset(){
+        this.x = this.startX;
+        this.y = this.startY;
+    }
+}
