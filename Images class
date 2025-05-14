@@ -1,0 +1,113 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package anotherproject;
+
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+public class Images extends JPanel{
+    private Image wall;
+    private Image BlueGhost;
+    private Image OrangeGhost;
+    private Image PinkGhost;
+    private Image RedGhost;
+    
+    private Image PacManUP;
+    private Image PacManDOWN;
+    private Image PacManRIGHT;
+    private Image PacManLEFT;
+    
+    public Images(){
+        
+    }
+
+    public Images(Image wall, Image BlueGhost, Image OrangeGhost, Image PinkGhost, Image RedGhost, Image PacManUP, Image PacManDOWN, Image PacManRIGHT, Image PacManLEFT) {
+        this.wall = wall;
+        this.BlueGhost = BlueGhost;
+        this.OrangeGhost = OrangeGhost;
+        this.PinkGhost = PinkGhost;
+        this.RedGhost = RedGhost;
+        this.PacManUP = PacManUP;
+        this.PacManDOWN = PacManDOWN;
+        this.PacManRIGHT = PacManRIGHT;
+        this.PacManLEFT = PacManLEFT;
+    }
+
+    public Image getWall() {
+        return wall;
+    }
+
+    public void setWall(Image wall) {
+        this.wall = wall;
+    }
+
+    public Image getBlueGhost() {
+        return BlueGhost;
+    }
+
+    public void setBlueGhost(Image BlueGhost) {
+        this.BlueGhost = BlueGhost;
+    }
+
+    public Image getOrangeGhost() {
+        return OrangeGhost;
+    }
+
+    public void setOrangeGhost(Image OrangeGhost) {
+        this.OrangeGhost = OrangeGhost;
+    }
+
+    public Image getPinkGhost() {
+        return PinkGhost;
+    }
+
+    public void setPinkGhost(Image PinkGhost) {
+        this.PinkGhost = PinkGhost;
+    }
+
+    public Image getRedGhost() {
+        return RedGhost;
+    }
+
+    public void setRedGhost(Image RedGhost) {
+        this.RedGhost = RedGhost;
+    }
+
+    public Image getPacManUP() {
+        return PacManUP;
+    }
+
+    public void setPacManUP(Image PacManUP) {
+        this.PacManUP = PacManUP;
+    }
+
+    public Image getPacManDOWN() {
+        return PacManDOWN;
+    }
+
+    public void setPacManDOWN(Image PacManDOWN) {
+        this.PacManDOWN = PacManDOWN;
+    }
+
+    public Image getPacManRIGHT() {
+        return PacManRIGHT;
+    }
+
+    public void setPacManRIGHT(Image PacManRIGHT) {
+        this.PacManRIGHT = PacManRIGHT;
+    }
+
+    public Image getPacManLEFT() {
+        return PacManLEFT;
+    }
+
+    public void setPacManLEFT(Image PacManLEFT) {
+        this.PacManLEFT = PacManLEFT;
+    }
+    
+    
+
+}
